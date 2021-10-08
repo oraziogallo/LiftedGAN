@@ -1,6 +1,7 @@
 import os
 import argparse
 import pickle
+import sys
 
 import torch
 from torch import nn
@@ -9,6 +10,7 @@ from scipy import linalg
 from tqdm import tqdm
 from imageio import imread
 
+sys.path.insert(0, '/home/ogallo/src-3rdparty/LiftedGAN/')
 
 from models.lifted_gan import LiftedGAN
 from utils import utils
