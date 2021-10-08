@@ -9,6 +9,8 @@ import torch
 
 from imageio import mimwrite
 
+sys.path.insert(0, '/home/ogallo/src-3rdparty/LiftedGAN/')
+
 import utils
 from models.lifted_gan import LiftedGAN
 
