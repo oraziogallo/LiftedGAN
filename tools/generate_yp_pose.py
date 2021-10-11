@@ -38,7 +38,7 @@ class Poses():
         #     pose[1] += np.pi
         # if pose[1] > 0: # face is looking down
         #     pose[1] -= np.pi
-        pose = self.pose_list[i] - np.array([0, np.pi])
+        pose = self.pose_list[i]# - np.array([0, np.pi])
         return pose
 
     def get_angles(self, i):
@@ -91,7 +91,7 @@ def main(args):
 
             angles = poses.get_angles(i)
             
-            yaw = -1*angles[0] / model.xyz_rotation_range
+            yaw = angles[0] / model.xyz_rotation_range
             pitch = angles[1] / model.xyz_rotation_range
 
             view_rotate[:,0] = torch.ones(b) * pitch
